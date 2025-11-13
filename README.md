@@ -1,85 +1,238 @@
-necessario py
-| Pygame | Compatível com Python | Sistema operacional suportado |
-| :---------------------- | :----------------------- | :---------------------------- |
-| **2.6.1** | ✅ 3.8 → 3.12 | Windows, macOS, Linux |
-| **2.5.x** | ✅ 3.8 → 3.11 | Windows, macOS, Linux |
-| **2.4.x** | ✅ 3.7 → 3.10 | Windows, macOS, Linux |
-| **2.3.x ou anteriores** | ⚠️ 3.6 → 3.9 (obsoletos) | Alguns sistemas podem falhar |
+# 🐦Flappy Bird – Projeto em Python (Pygame)
 
-⚠️ Importante
+---
 
-Python 3.13 e 3.14 ainda não são suportados oficialmente (novas APIs quebraram compatibilidade).
-➜ É por isso que o pygame falhou antes quando você estava com o Python 3.14.
+## 🎮 Sobre o Jogo
 
-A versão 3.12 é atualmente a mais nova suportada 100% estável.
+Este é um remake inspirado no clássico **Flappy Bird**, desenvolvido em **Python + Pygame**. O objetivo é simples: desviar dos canos e fazer a maior pontuação possível.
 
-🧭 Passo a passo para forçar o VS Code e o venv a usar o Python 3.12.10
-🔹 1. Confirme que o Python 3.12.10 está instalado
+Funcionalidades:
 
-No PowerShell:
+🐦 Animação completa do pássaro
 
+🌄 Movimento suave de fundo e solo
+
+🧱 Canos gerados aleatoriamente
+
+⌨️ Controle via barra de espaço
+
+🔊 Sons de pulo, colisão e pontuação
+
+🧮 Sistema de pontuação
+
+---
+
+## 📂 Estrutura do Projeto
+
+```
+FlappyBird-Python/
+│── .gitignore
+│── README.md
+│── FlappyBird.py
+│── .venv/
+│── .idea/
+│   ├── inspectionProfiles/
+│   │   └── profiles_settings.xml
+│   ├── FlappyBird em Python.iml
+│   ├── misc.xml
+│   ├── modules.xml
+│   └── workspace.xml
+│
+│── imgs/
+│   ├── base.png
+│   ├── bg1.png
+│   ├── bg2.jpg
+│   ├── bird1.png
+│   ├── bird2.png
+│   ├── bird3.png
+│   ├── pipe.png
+│   ├── pipe1.png
+│   ├── pipe2.png
+│
+│── sons/
+│   ├── colisao.mp3
+│   ├── pulo.mp3
+│   └── ponto.mp3
+```
+---
+## 🛠️ Tecnologias utilizadas
+
+- Python 3.12 (recomendado)
+
+- Pygame 2.5+
+
+⚠️ Compatibilidade importante (Python x Pygame)
+
+2.6.1	✅ 3.8 → 3.12	Windows, macOS, Linux
+
+2.5.x	✅ 3.8 → 3.11	Windows, macOS, Linux
+
+2.4.x	✅ 3.7 → 3.10	Windows, macOS, Linux
+
+2.3.x ou anteriores	⚠️ 3.6 → 3.9 (obsoletos)	Compatibilidade parcial
+
+⚠️ Atenção
+
+Python 3.13 e 3.14 NÃO são suportados pelo Pygame (APIs mudaram).
+
+Se estiver usando essas versões, a instalação falhará.
+✔️ A versão 3.12 é a mais nova totalmente compatível.
+
+---
+
+## ▶️ Como Executar o Jogo
+
+```bash
+# Instalar dependências
+pip install -r requirements.txt
+
+# Rodar o jogo
+python src/main.py
+```
+## 🎮 Como Jogar
+
+- Pressione barra de espaço para fazer o pássaro subir.
+
+- Desvie dos canos.
+
+- Tente fazer a maior pontuação possível!
+
+---
+
+## 📦 Download da Última Versão (ZIP)
+
+Baixe a versão pronta para uso:
+
+👉 **Releases**: disponível na aba **Releases** deste repositório.
+
+---
+
+## 🖼️ GIF / Screenshot
+
+Inclua aqui o GIF ou imagem do jogo:
+
+![Gameplay](./assets/gameplay.gif)
+
+---
+
+## 🌐 Release no GitHub
+
+As versões empacotadas ficam na seção **Releases**, incluindo:
+
+* Arquivo ZIP com código organizado
+* Versão acompanhada de changelog
+
+---
+
+## 📜 Licença
+
+Este projeto está sob a licença **MIT**.
+
+Você pode utilizar, modificar e distribuir como quiser.
+
+```
+MIT License
+Copyright (c) 2025
+```
+
+---
+
+## ✨ Melhorias Futuras
+
+* Implementar sons
+* Criar menu inicial
+* Adicionar sistema de dificuldade crescente
+* Colocar placar global com API
+
+---
+
+👨‍💻 Autor
+
+Renan Faganello
+Projeto desenvolvido com dedicação enquanto evolui em Python e desenvolvimento de jogos.
+
+---
+
+## 🙌 Contribuições
+
+Contribuições são sempre bem-vindas! Sinta-se à vontade para abrir um pull request.
+
+---
+______________________________________________________________________________________________________________________________________________________________________________
+
+
+🛠️ Tecnologias utilizadas
+
+Python 3.12 (recomendado)
+
+Pygame 2.5+
+
+⚠️ Compatibilidade importante (Python x Pygame)
+Pygame	Suporte Python	Sistemas suportados
+2.6.1	✅ 3.8 → 3.12	Windows, macOS, Linux
+2.5.x	✅ 3.8 → 3.11	Windows, macOS, Linux
+2.4.x	✅ 3.7 → 3.10	Windows, macOS, Linux
+2.3.x ou anteriores	⚠️ 3.6 → 3.9 (obsoletos)	Compatibilidade parcial
+
+⚠️ Atenção
+
+Python 3.13 e 3.14 NÃO são suportados pelo Pygame (APIs mudaram).
+
+Se estiver usando essas versões, a instalação falhará.
+✔️ A versão 3.12 é a mais nova totalmente compatível.
+
+🧭 Como configurar corretamente (Python 3.12 + venv)
+1. Verifique suas versões instaladas
 py -0
 
-Isso vai listar todos os Pythons instalados.
-Você deve ver algo assim:
+
+Você deve ver algo como:
 
 -3.14-64
 -3.12-64
 
-Se não aparecer o 3.12, baixe e instale ele aqui:
-👉 https://www.python.org/downloads/release/python-31210/
 
-Durante a instalação, marque:
-✅ “Add Python 3.12 to PATH”
+Se o 3.12 não aparecer, instale por aqui:
+https://www.python.org/downloads/release/python-31210/
 
-🔹 2. Delete o ambiente virtual atual
+Marque:
+✔️ Add Python to PATH
 
-No seu projeto, delete a pasta .venv:
+2. Crie o ambiente virtual correto
 
-C:\Users\Renan Faganello\Desktop\Projetos Renan Dev\FlappyBird em Python\.venv
-
-🔹 3. Crie um novo ambiente virtual com o Python 3.12
-
-No terminal do VS Code (PowerShell), dentro da pasta do projeto:
+Apague seu .venv antigo e recrie:
 
 py -3.12 -m venv .venv
 
-Isso cria uma nova virtualenv baseada explicitamente no Python 3.12.10.
-
-🔹 4. Ative o novo ambiente
+3. Ative
 .\.venv\Scripts\activate
 
-Você deve ver algo como:
-
-(.venv) PS C:\Users\Renan Faganello\Desktop\Projetos Renan Dev\FlappyBird em Python>
-
-🔹 5. Verifique a versão ativa
+4. Verifique
 python --version
 
-Saída esperada:
 
+Saída esperada:
 Python 3.12.10
 
-🔹 6. Reinstale o Pygame
-
-Agora sim, o comando deve funcionar:
-
+5. Instale o pygame
 pip install pygame
 
-🔹 7. Configure o VS Code para usar o novo interpretador
+📦 Instalação do projeto
+git clone https://github.com/Renan-Faganello/FlappyBird-Python.git
+cd FlappyBird-Python
+pip install -r requirements.txt
+python FlappyBird.py
 
-No VS Code:
 
-Pressione Ctrl + Shift + P
 
-Digite “Python: Select Interpreter”
+📷 Demonstração
 
-Escolha o caminho:
+(GIF será adicionado aqui posteriormente)
 
-.venv\Scripts\python.exe (Python 3.12.10)
+📜 Licença
 
-Após isso, rode:
+Este projeto está licenciado sob MIT License.
 
-python -m pygame.examples.aliens
 
-🎉 Se abrir uma janelinha com o jogo, está tudo certo!
+
+
