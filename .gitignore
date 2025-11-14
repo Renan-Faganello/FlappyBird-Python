@@ -1,13 +1,33 @@
-# Ambiente virtual
-.venv/
-venv/
-
-# Arquivos temporários
+# Python
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+*.pdb
 
-# Configurações do VS Code
+# Ambientes virtuais
+.venv/
+env/
+venv/
+
+# Pygame cache
+*.db
+
+# VSCode
 .vscode/
 
-# Arquivo de ambiente
-.env
+# PyCharm / IntelliJ
+.idea/
+
+# Arquivos temporários
+*.log
+*.tmp
+
+# Sistema operacional
+Thumbs.db
+Desktop.ini
+
+# ZIPs e builds
+*.zip
+dist/
+build/
