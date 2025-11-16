@@ -1,26 +1,30 @@
-# 🐦Flappy Bird – Projeto em Python (Pygame)
+<h1 align="center">🐦Flappy Bird – Projeto em Python (Pygame)</h1>
 
 ---
 
 ## 🎮 Sobre o Jogo
+<br>
 
 Este é um remake inspirado no clássico **Flappy Bird**, desenvolvido em **Python + Pygame**. O objetivo é simples: desviar dos canos e fazer a maior pontuação possível.
 
+<br>
+
 Funcionalidades:
 
-🐦 Animação completa do pássaro
+- 🐦 Animação completa do pássaro
 
-🌄 Movimento suave de fundo e solo
+- 🌄 Movimento suave de fundo e solo
 
-🧱 Canos gerados aleatoriamente
+- 🧱 Canos gerados aleatoriamente
 
-⌨️ Controle via barra de espaço
+- ⌨️ Controle via barra de espaço
 
-🔊 Sons de pulo, colisão e pontuação
+- 🔊 Sons de colisão
 
-🧮 Sistema de pontuação
+- 🧮 Sistema de pontuação
 
 ---
+<br>
 
 ## 📂 Estrutura do Projeto
 
@@ -56,6 +60,7 @@ FlappyBird-Python/
 ```
 
 ---
+<br>
 
 ## 🛠️ Tecnologias utilizadas
 
@@ -63,34 +68,109 @@ FlappyBird-Python/
 
 - Pygame 2.5+
 
-⚠️ Compatibilidade importante (Python x Pygame)
+⚠️ Compatibilidade importante (Python x Pygame) ⚠️
 
-2.6.1 ✅ 3.8 → 3.12 Windows, macOS, Linux
+|    Pygame    | Suporte Python |     Sistemas suportados     |
+|:------------:|:--------------:|:----------------------------:|
+| **2.6.1**    |  3.8 → 3.12  | Windows, macOS, Linux        |
+| **2.5.x**    |  3.8 → 3.11  | Windows, macOS, Linux        |
+| **2.4.x**    |  3.7 → 3.10  | Windows, macOS, Linux        |
+| **2.3.x ou anteriores** |  3.6 → 3.9 (obsoletos) | Compatibilidade parcial |
 
-2.5.x ✅ 3.8 → 3.11 Windows, macOS, Linux
+Atenção:
 
-2.4.x ✅ 3.7 → 3.10 Windows, macOS, Linux
-
-2.3.x ou anteriores ⚠️ 3.6 → 3.9 (obsoletos) Compatibilidade parcial
-
-⚠️ Atenção
-
-Python 3.13 e 3.14 NÃO são suportados pelo Pygame (APIs mudaram).
-
-Se estiver usando essas versões, a instalação falhará.
-✔️ A versão 3.12 é a mais nova totalmente compatível.
+- Python 3.13 e 3.14 NÃO são suportados pelo Pygame (APIs mudaram).
+- Se estiver usando essas versões, a instalação falhará.
+- A versão 3.12 é a mais nova totalmente compatível.
 
 ---
+<br>
 
 ## ▶️ Como Executar o Jogo
 
-```bash
-# Instalar dependências
-pip install -r requirements.txt
+1) Obter o código
+<p align="center">Opção A — clonar com Git:</p>
 
-# Rodar o jogo
-python src/main.py
+```bash
+git clone https://github.com/Renan-Faganello/FlappyBird-Python.git
+cd FlappyBird-Python
+
 ```
+<p align="center">Opção B — baixar ZIP:</p>
+
+
+- Clique em Code → Download ZIP no GitHub e extraia.
+
+- Abra a pasta extraída no terminal.
+<br>
+
+2) Criar e ativar um ambiente virtual
+
+```bash
+# criar venv (usa o Python 3.12 se estiver instalado)
+py -3.12 -m venv .venv
+
+# ativar
+.\.venv\Scripts\activate
+```
+Se py não existir, use:
+```bash
+python -m venv .venv
+.\.venv\Scripts\activate
+```
+macOS / Linux
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+```
+Ao ativar, o prompt mostrará (.venv) no começo da linha.
+
+3) Conferir a versão do Python ativa
+```bash
+python --version
+# Esperado: Python 3.12.x (ou 3.11.x)
+
+```
+4) Atualizar pip e instalar dependências
+```bash
+python -m pip install --upgrade pip setuptools wheel
+pip install -r requirements.txt
+```
+```bash
+python -m pip install --upgrade pip setuptools wheel
+pip install pygame
+```
+Se a instalação do pygame falhar por compilação (erro com distutils), rode:
+```bash
+pip install pygame==2.5.2 --only-binary :all:
+
+```
+(isto força a instalação do wheel pré-compilado compatível com Python 3.12/Windows)
+
+5) Testar se o Pygame funciona
+```bash
+python -m pygame.examples.aliens
+```
+Se abrir uma janela de exemplo, o pygame está OK.
+
+6) Rodar o jogo
+Com o .venv ativo e estando na pasta do projeto:
+```bash
+python FlappyBird.py
+```
+
+7) Se algo der errado — quick fixes
+
+Erro: pygame not found → pip install pygame
+
+Erro: python não encontrado → marque “Add Python to PATH” na instalação do Python e reabra o terminal
+
+PowerShell bloqueando ativação → rode (uma vez):
+```bash
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
+```
+<br>
 
 ## 🎮 Como Jogar
 
@@ -101,6 +181,7 @@ python src/main.py
 - Tente fazer a maior pontuação possível!
 
 ---
+<br>
 
 ## 📦 Download da Última Versão (ZIP)
 
@@ -109,6 +190,7 @@ Baixe a versão pronta para uso:
 👉 **Releases**: disponível na aba **Releases** deste repositório.
 
 ---
+<br>
 
 ## 🖼️ GIF / Screenshot
 
@@ -117,6 +199,7 @@ Inclua aqui o GIF ou imagem do jogo:
 ![Gameplay](./assets/gameplay.gif)
 
 ---
+<br>
 
 ## 🌐 Release no GitHub
 
@@ -126,6 +209,7 @@ As versões empacotadas ficam na seção **Releases**, incluindo:
 - Versão acompanhada de changelog
 
 ---
+<br>
 
 ## 📜 Licença
 
@@ -139,15 +223,7 @@ Copyright (c) 2025
 ```
 
 ---
-
-## ✨ Melhorias Futuras
-
-- Implementar sons
-- Criar menu inicial
-- Adicionar sistema de dificuldade crescente
-- Colocar placar global com API
-
----
+<br>
 
 👨‍💻 Autor
 
@@ -155,6 +231,7 @@ Renan Faganello
 Projeto desenvolvido com dedicação enquanto evolui em Python e desenvolvimento de jogos.
 
 ---
+<br>
 
 ## 🙌 Contribuições
 
@@ -164,25 +241,6 @@ Contribuições são sempre bem-vindas! Sinta-se à vontade para abrir um pull r
 
 ---
 
-🛠️ Tecnologias utilizadas
-
-Python 3.12 (recomendado)
-
-Pygame 2.5+
-
-⚠️ Compatibilidade importante (Python x Pygame)
-Pygame Suporte Python Sistemas suportados
-2.6.1 ✅ 3.8 → 3.12 Windows, macOS, Linux
-2.5.x ✅ 3.8 → 3.11 Windows, macOS, Linux
-2.4.x ✅ 3.7 → 3.10 Windows, macOS, Linux
-2.3.x ou anteriores ⚠️ 3.6 → 3.9 (obsoletos) Compatibilidade parcial
-
-⚠️ Atenção
-
-Python 3.13 e 3.14 NÃO são suportados pelo Pygame (APIs mudaram).
-
-Se estiver usando essas versões, a instalação falhará.
-✔️ A versão 3.12 é a mais nova totalmente compatível.
 
 🧭 Como configurar corretamente (Python 3.12 + venv)
 
@@ -231,3 +289,17 @@ python FlappyBird.py
 📜 Licença
 
 Este projeto está licenciado sob MIT License.
+
+1) Obter o código
+
+Opção A — clonar com Git:
+
+git clone https://github.com/Renan-Faganello/FlappyBird-Python.git
+cd FlappyBird-Python
+
+
+Opção B — baixar ZIP:
+
+Clique em Code → Download ZIP no GitHub e extraia.
+
+Abra a pasta extraída no terminal.
